@@ -4,7 +4,14 @@
   "description": "Rick rolling function",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pre-commit": "pretty-quick --staged --no-restage",
+    "pre-push": "npm run test",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "preversion": "npm test",
+    "postversion": "git push origin --tags --no-verify",
+    "test": "mocha spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/alexdang1993374/rickroller/issues"
   },
-  "homepage": "https://github.com/alexdang1993374/rickroller#readme"
+  "homepage": "https://github.com/alexdang1993374/rickroller#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "husky": "^4.3.5",
+    "mocha": "^8.2.1"
+  },
+  "devDependencies": {
+    "pinst": "^2.1.1"
+  }
 }

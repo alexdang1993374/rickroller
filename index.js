@@ -1,8 +1,9 @@
-function rickRoller (url) {
-    url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-    return url;
+function rickRoller () {
+    return 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 }
 
+console.log(rickRoller());
+
 module.exports = {
-    rickRoller:rickRoller
+   rickRoller
 }
