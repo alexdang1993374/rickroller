@@ -1,6 +1,6 @@
 {
   "name": "alexdang-rickroller",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Rick rolling function",
   "main": "index.js",
   "scripts": {
